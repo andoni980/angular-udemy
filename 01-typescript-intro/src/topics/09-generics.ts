@@ -1,14 +1,14 @@
 
-export function whatsMyType( argument: any ): any {
+export function whatsMyType<T>( argument: T ): T {
     return argument;
 }
 
-const amIString = whatsMyType('Hola mundo');
-const amINumber = whatsMyType(100);
-const amIArray = whatsMyType([1,2,3,4,5]);
+let amIString = whatsMyType<string>('Hola mundo');
+let amINumber = whatsMyType<number>(100);
+let amIArray = whatsMyType<number[]>([1,2,3,4,5]);
 
 
 
 console.log(amIString.split(' '));
-console.log(amINumber.split(' '));
-console.log(amIArray.split(' '));
+console.log(amINumber.toFixed(1));
+console.log(amIArray.join('-'));
