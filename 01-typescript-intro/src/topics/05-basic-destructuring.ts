@@ -46,14 +46,4 @@ const [, , trunkss = 'Not found']= dbz;
 console.log('Personaje 3: ', trunkss);
 
 
-
-console.log()
-
-
-
-
-
-
-
-
 export{};
