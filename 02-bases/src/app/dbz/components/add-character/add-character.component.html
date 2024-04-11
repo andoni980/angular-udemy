@@ -4,10 +4,18 @@
     <h4 class="card-title mb-3">Agregar Personaje</h4>
   </div>
   <div class="">
-    <input class="form-control mb-3 card-text" type="text" placeholder="Nombre">
-    <input class="form-control mb-3 card-text" type="number" placeholder="Poder">
-    <button type="submit" class="btn btn-primary mt-3 card-text">
+
+    <input [(ngModel)]="character.name" name="name" class="form-control mb-3 card-text" type="text" placeholder="Nombre">
+
+    <input [(ngModel)]="character.power" name="power" class="form-control mb-3 card-text" type="number" placeholder="Poder">
+
+    <button type="submit" class="btn btn-primary mt-3 card-text" (click)="emitCharacter()">
+
       Agregar
+
     </button>
   </div>
+
+  <pre>{{ character | json }}</pre>
+
 </form>
