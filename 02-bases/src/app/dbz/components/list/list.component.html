@@ -5,7 +5,14 @@
   <li *ngFor="
     let character of characterList;
     let i = index;
-  " class="list-group-item">
+    let isFirst = first;
+    let isLast = last;
+    let isEven = even;
+    let isOdd = odd;
+  "
+    class="list-group-item"
+    [ngClass]="{ 'list-group-item-success': isLast,
+                'list-group-item-primary': isEven }">
 
     <span class="text-primary">{{ i + 1 }}.</span>
     <span class=>{{ character.name }}</span>
